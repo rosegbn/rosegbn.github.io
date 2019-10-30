@@ -1,0 +1,231 @@
+
+/***********************
+ * Global
+ **********************/
+body {
+    height: 80vh;
+    background: rgb(204,204,204);
+    background: linear-gradient(185deg, rgba(204,204,204,1) 0%, rgba(240,240,240,1) 60%, rgba(240,240,240,1) 100%);
+	font-family: 'Raleway', sans-serif;
+	font-size: 18px;
+}
+svg {
+    max-width: 100%;
+}
+
+h1 {
+    font-family: 'Alfa Slab One', sans-serif;
+    font-size: 3.5rem;
+    margin-bottom: 28px
+}
+
+.card-portfolio {
+    max-width: 760px;
+    flex-wrap: inherit;
+    margin: 30px auto;
+   background: #fff;
+    padding: 15px 0;
+    border-radius: 100px; 
+    font-size: 14px;
+}
+.animate-block {
+    margin-top: 80px;
+    margin-top: 9vh;
+}
+.view-all {
+    background-color: #429c0f;
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 30px;
+    box-shadow: 0 0 8px -4px #000;
+    color: #fff;
+    display: inline-block;
+    font-size: 14px;
+    padding: 12px;
+    text-align: center;
+}
+.view-all:hover {
+	color: #fff;
+	background: #34770D;
+	text-decoration: none;
+}
+    
+@media (min-width: 767px ) and (max-width: 991px) {
+    .hide-small-screen {
+        display: none !important;
+    }
+}
+@media (max-width:464px) {
+    .card-portfolio {
+        text-align: center;
+    }
+    .view-all {
+        font-size: 30px;
+        padding: 12px 18px;
+        text-align: center;
+    }
+
+}
+/***********************
+ * Banner - Pixy
+ **********************/
+.banneranimate {
+  background: url('../images/pixy_run.png') no-repeat left top;
+  height: 460px; 
+  width: 470px;
+  position: absolute;  
+  bottom: 10px;
+  transform: translateX(65%); 
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0) translateX(65%) scale(1.0, 1.0);
+  -webkit-animation:  run 0.5s steps(4) infinite forwards;  
+  -moz-animation:  run 0.5s steps(4) infinite forwards;  
+  -o-animation:  run 0.5s steps(4) infinite forwards;  
+  animation:  run 0.5s steps(4) infinite forwards;
+  z-index: 10;  
+} 
+
+@-webkit-keyframes run {
+  0% {background-position: 0 0; }
+  100% {background-position: -1880px 0;}
+}
+@-moz-keyframes run {
+  0% {background-position: 0 0; }
+  100% {background-position: -1880px 0;}
+}
+@-o-@keyframes run {
+  0% {background-position: 0 0; }
+  100% {background-position: -1880px 0;}
+}
+@keyframes run {
+  0% {background-position: 0 0; }
+  100% {background-position: -1880px 0;}
+}
+
+/*************************************
+ * Foreground, Midground, Background
+ **************************************/  
+.foreground, 
+.midground, 
+.background {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  background-color: transparent;
+  width: 100%;
+  height: 9%;
+  position: absolute;
+  top: auto; bottom: 0; left: 0;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0) scale(1.0, 1.0);
+  -moz-backface-visibility: hidden;
+  -moz-transform: translateZ(0) scale(1.0, 1.0);
+  -o-backface-visibility: hidden;
+  -o-transform: translateZ(0) scale(1.0, 1.0);
+  transform: translateZ(0) scale(1.0, 1.0);
+}
+
+/*
+.animate-block { 
+  position: relative; 
+}
+*/
+
+
+.animate-block, 
+.midground, 
+.background {
+    height: 580px;
+    height: 48vw;
+    max-height: 580px;
+}
+.foreground {
+  background:  url('../images/grass_foreground.png') 0 100% repeat-x; 
+  -webkit-animation: foreground-run linear  5s infinite running;
+  -moz-animation: foreground-run linear  5s infinite running;
+  -o-animation: foreground-run linear  5s infinite running;
+  animation: foreground-run linear  5s infinite running;
+  z-index: 4;
+}
+
+@-webkit-keyframes foreground-run {
+  0% { background-position: -8870.4px 100%; } 
+  100% {background-position: -12454.4px 100%; } 
+}
+
+@-moz-keyframes foreground-run {
+  0% { background-position: -8870.4px 100%; } 
+  100% {background-position: -12454.4px 100%; } 
+}
+
+@-o-keyframes foreground-run {
+  0% { background-position: -8870.4px 100%; } 
+  100% {background-position: -12454.4px 100%;} 
+}
+
+@keyframes foreground-run {
+  0% { background-position: -8870.4px 100%; } 
+  100% { background-position: -12454.4px 100%; } 
+}
+.midground {
+  background:  url('../images/midground.png') 0 100% repeat-x;
+  -webkit-animation: parallax_md_fast linear  5s infinite;
+  -moz-animation: parallax_md_fast linear  5s infinite;
+  -o-animation: parallax_md_fast linear  5s infinite;
+  animation: parallax_md_fast linear  5s infinite;
+  z-index: 3;
+}
+
+@-webkit-keyframes parallax_md_fast {  
+  0% { background-position: 2000px 100%; } 
+  100% {background-position: 0 100%; }  
+}
+@-moz-eyframes parallax_md_fast {  
+  0% { background-position: 2000px 100%; } 
+  100% {background-position: 0 100%; }  
+}
+@-o-keyframes parallax_md_fast {  
+  0% { background-position: 2000px 100%; } 
+  100% {background-position: 0 100%; }  
+}
+@keyframes midground-parallax {  
+  0% { background-position: 2000px 100%; } 
+  100% {background-position: 0 100%; }  
+}
+
+.background {
+  background-color: transparent;
+  background-image:
+  url('../images/bg1.png'),
+  url('../images/bg2.png'),
+  url('../images/mountain1.png'),
+  url('../images/mountain2.png');
+  background-repeat: repeat-x;
+  background-position: 0 0;
+  z-index: 1;
+  -webkit-animation: parallax_bg_fast 20s linear infinite;
+  -moz-animation: parallax_bg_fast 20s linear infinite;
+  -o-animation: parallax_bg_fast 20s linear infinite;
+  animation: parallax_bg_fast 20s linear infinite;
+}
+
+@-webkit-keyframes parallax_bg_fast { 
+  0% { background-position: 1485px 1%, 1237.5px 1%, 1113.75px 1%, 990px 0;} 
+  100% {background-position: -3885px 1%, -3237.5px 1%, -2913.75px 1%, -2590px 1%; }
+}
+
+@-moz-keyframes parallax_bg_fast { 
+  0% { background-position: 1485px 1%, 1237.5px 1%, 1113.75px 1%, 990px 0;} 
+  100% {background-position: -3885px 1%, -3237.5px 1%, -2913.75px 1%, -2590px 1%; }
+}
+
+@-o-keyframes parallax_bg_fast { 
+  0% { background-position: 1485px 1%, 1237.5px 1%, 1113.75px 1%, 990px 0;} 
+  100% {background-position: -3885px 1%, -3237.5px 1%, -2913.75px 1%, -2590px 1%; }
+}
+
+@keyframes parallax_bg_fast { 
+  0% { background-position: 1485px 1%, 1237.5px 1%, 1113.75px 1%, 990px 0;} 
+  100% {background-position: -3885px 1%, -3237.5px 1%, -2913.75px 1%, -2590px 1%; }
+}
+  
